@@ -1,7 +1,8 @@
 package nao.cycledev.java8test.functionalinterfaces;
 
-/**
- * Created by noprysk on 29.04.2015.
- */
-public interface Converter {
+@FunctionalInterface
+public interface Converter<F, T> {
+
+    T convert(F from);
+
 }

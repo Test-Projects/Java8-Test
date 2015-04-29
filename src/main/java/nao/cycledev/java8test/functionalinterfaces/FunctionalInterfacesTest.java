@@ -4,7 +4,6 @@ import java.util.function.Function;
 
 public class FunctionalInterfacesTest {
 
-
     public static void test(){
 
         Function<String, String> func1 = (name) -> "@" + name + "@";
@@ -17,6 +16,12 @@ public class FunctionalInterfacesTest {
         
     }
 
+    public static void funcInterfaceTest(String value){
 
+        Converter<String, Integer> converter = Integer::valueOf;
+        Integer converted = converter.convert(value);
+        System.out.println(converted);
+
+    }
 
 }
