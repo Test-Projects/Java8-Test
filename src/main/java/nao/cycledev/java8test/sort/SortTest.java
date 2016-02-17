@@ -19,7 +19,9 @@ public class SortTest {
     }
 
     public static void sortApplesByWeight() {
+        apples.forEach(System.out::println);
+        System.out.println("******************************************");
         apples.sort(Comparator.comparing(Apple::getWeight));
-        apples.forEach(a -> System.out.println(a));
+        apples.forEach(System.out::println);
     }
 }
