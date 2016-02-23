@@ -10,7 +10,7 @@ public class StreamTest {
     public void streamSortTest(){
 
         stringCollection.stream()
-                .sorted((s1, s2) -> s1.compareTo(s2))
+                .sorted(String::compareTo)
                 .forEach(System.out::println);
 
     }
@@ -28,7 +28,7 @@ public class StreamTest {
 
          stringCollection.stream()
                 .map(String::toUpperCase)
-                .sorted((s1, s2) -> s2.compareTo(s1))
+                .sorted(String::compareTo)
                 .forEach(System.out::println);
 
     }
