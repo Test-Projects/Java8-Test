@@ -9,7 +9,7 @@ public class MainApp {
 
     public static void main(String[] args) throws IOException, URISyntaxException {
         StreamTest streamTest = new StreamTest();
-        streamTest.streamMapTest();
+        streamTest.streamDistinctLetter();
     }
 
 }

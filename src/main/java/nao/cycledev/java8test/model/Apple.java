@@ -1,6 +1,6 @@
 package nao.cycledev.java8test.model;
 
-public class Apple {
+public class Apple{
 
     private int id;
     private String name;
@@ -58,6 +58,4 @@ public class Apple {
     public static boolean isAppleGreen(Apple apple){
         return "green".equals(apple.getColor());
     }
-
-
 }
