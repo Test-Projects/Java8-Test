@@ -36,4 +36,6 @@ public class MemoryData {
             new Transaction(alan, 2012, 950)
     );
 
+    public static final List<Integer> intList = Arrays.asList(25, 8, 15, 9, 10, 3, 5);
+
 }
