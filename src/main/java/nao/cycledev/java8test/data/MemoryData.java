@@ -21,6 +21,8 @@ public class MemoryData {
             new Dish("salmon", false, 450, Dish.Type.FISH) );
 
     public static final List<String> words = Arrays.asList("hello", "world");
+    public static final List<Integer> numbers = Arrays.asList(2, 3, 7, 9 ,11);
+
 
     private static Trader raoul = new Trader("Raoul", "Cambridge");
     private static Trader mario = new Trader("Mario","Milan");

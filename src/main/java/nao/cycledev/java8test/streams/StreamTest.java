@@ -2,6 +2,7 @@ package nao.cycledev.java8test.streams;
 
 import nao.cycledev.java8test.data.MemoryData;
 import nao.cycledev.java8test.model.Apple;
+import nao.cycledev.java8test.model.Dish;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -50,13 +51,11 @@ public class StreamTest {
     }
 
     public void streamCountTest(){
-
         long count =
                 stringCollection.stream()
                 .filter(s -> s.startsWith("b"))
                 .count();
         System.out.println(count);
-
     }
 
     public void streamTest() {
@@ -80,5 +79,25 @@ public class StreamTest {
                 .collect(Collectors.toList());
 
         letters.forEach(System.out::println);
+    }
+
+    public void streamTestIfPresent() {
+        MemoryData.menu.stream()
+                .filter(Dish::isVegetarian)
+                .skip(3)
+                .findFirst()
+                .ifPresent(System.out::println);
+    }
+
+    public void streamTestRreduceSum() {
+        MemoryData.numbers.stream()
+                .reduce(Integer::sum)
+                .ifPresent(System.out::println);
+    }
+
+    public void streamTestRreduceMax() {
+        MemoryData.numbers.stream()
+                .reduce(Integer::max)
+                .ifPresent(System.out::println);
     }
 }
